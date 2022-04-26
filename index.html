@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="style.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m6">
+                <h4>EXPENSE TRACKER</h4>
+                <div class="row " style="border-radius: 10px; border: solid teal; padding: 30px;">
+                    <div class="input-field">
+                        <input placeholder="Please Enter Your budget" id="budget" name="budget" type="number">
+                        <button id="budget-button" onclick="calculate(); budget.value = undefined" class="btn ">Calculate</button>
+                    </div>
+                </div>
+                <div class="row " style="border-radius: 10px; border: solid teal; padding: 30px;">
+                    <div class="input-field">
+                        <input placeholder="Please Enter Your Expense" id="expense-name" name="expense" type="text"><br><br><br>
+                    </div>
+                        <div class="input-field">
+                        <input placeholder="Please Enter Your Expense amount" id="expense-ajouterRetirer" name="ajouterRetirer" type="number">
+                        <button onclick="expenseAdding(); add(); expenseName.value = null; expenseAmout.value=undefined; " id="expense-button" class="btn ">Add Expense</button>
+                        </div>
+                    
+                </div>
+            </div>
+            <div class="col s12 m6">
+                <div class="row">
+                    <div class="col s4 center">
+                        <h5>BUDGET</h5>
+                        <i class="fa-solid fa-money-bill-1 medium blue-text"></i>
+                        <h6 id="budget-resume" style="color: green;">0 CFA</h6>
+                    </div>
+                    <div class="col s4 center">
+                        <h5>EXPENSES</h5>
+                        <i class="fa-solid fa-credit-card medium blue-text"></i>
+                        <h6 id="expense-resume" style="color: red;">0 CFA</h6>
+                    </div>
+                    <div class="col s4 center">
+                        <h5>BALANCE</h5>
+                        <i class="fa-solid fa-dollar-sign medium blue-text"></i>
+                        <h6 id="balance" style="color: black;">0 CFA</h6>
+                    </div>
+                </div>
+                <div class="row" id="inventaire">
+                    <div class="row">
+                        <div id="title-cell" class="col s4 center">
+                            <h5>Expense Title</h5>
+                        </div>
+                        <div id="value-cell" class="col s4 center">
+                            <h5>Expense Value</h5>
+                        </div>
+                        <div id ="edit-cell" class="col s4 center">
+                            <h5>.</h5>
+                        </div>
+                    </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    
+</body>
+
+<script src="javacript.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</html>
